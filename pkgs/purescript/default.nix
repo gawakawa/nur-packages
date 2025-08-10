@@ -3,6 +3,7 @@
 let
   purescript-overlay = builtins.fetchTarball {
     url = "https://github.com/thomashoneyman/purescript-overlay/archive/main.tar.gz";
+    sha256 = "1njsdyhlvsq3l9hwjppbvr4b0l9l7fid45f0f5anisc35jn9xaxa";
   };
   pkgsWithOverlay = import pkgs.path {
     inherit (pkgs) system;
