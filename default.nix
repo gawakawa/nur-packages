@@ -19,6 +19,7 @@
   example-package = pkgs.callPackage ./pkgs/example-package { };
   go = pkgs.callPackage ./pkgs/go { };
   idris2 = pkgs.callPackage ./pkgs/idris2 { };
+  lean = pkgs.callPackage ./pkgs/lean { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
