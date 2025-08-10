@@ -3,7 +3,7 @@
 pkgs.mkShell {
   buildInputs = with pkgs; [
     deno
-    nodejs_22
+    nodePackages.nodejs
     pnpm
     yarn-berry
   ];
