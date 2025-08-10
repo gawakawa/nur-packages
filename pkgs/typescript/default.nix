@@ -4,7 +4,6 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
     deno
     nodePackages.nodejs
-    pnpm
     yarn-berry
   ];
 
