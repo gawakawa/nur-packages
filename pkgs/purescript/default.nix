@@ -5,7 +5,7 @@ let
     owner = "thomashoneyman";
     repo = "purescript-overlay";
     rev = "main";
-    sha256 = "1njsdyhlvsq3l9hwjppbvr4b0l9l7fid45f0f5anisc35jn9xaxa";
+    hash = "sha256-qquerCyD6WhVccAV0qI7NFGwSN7rXslhogPrTaFvWto=";
   };
   pkgsWithOverlay = import pkgs.path {
     inherit (pkgs) system;
