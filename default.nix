@@ -20,7 +20,7 @@
   go = pkgs.callPackage ./pkgs/go { };
   idris2 = pkgs.callPackage ./pkgs/idris2 { };
   lean = pkgs.callPackage ./pkgs/lean { };
-  rust = pkgs.callPackage ./pkgs/rust { };
+  # rust = pkgs.callPackage ./pkgs/rust { };
   # purescript = pkgs.callPackage ./pkgs/purescript { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
