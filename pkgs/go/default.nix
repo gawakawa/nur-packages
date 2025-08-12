@@ -5,6 +5,7 @@ pkgs.mkShell {
     go
     golines
     gopls
+    gotools
   ];
 
   shellHook = "";
