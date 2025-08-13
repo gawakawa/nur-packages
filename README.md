@@ -35,3 +35,40 @@ Uncomment this if you use travis:
 -->
 [![Cachix Cache](https://img.shields.io/badge/cachix-gawakawa-blue.svg)](https://gawakawa.cachix.org)
 
+## Usage
+
+### Using with Flakes
+
+```nix
+{
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+    nur-packages.url = "github:gawakawa/nur-packages";
+  };
+
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    nur-packages,
+    ...
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        nurpkgs = nur-packages.legacyPackages.${system};
+      in
+      {
+        devShells.default = nurpkgs.go;
+      }
+    );
+}
+```
+
+### Using with nix shell
+
+```bash
+$ nix-shell -p nur.repos.gawakawa.go
+```
+
