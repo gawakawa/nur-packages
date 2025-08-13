@@ -16,7 +16,6 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
   go = pkgs.callPackage ./pkgs/go { };
   idris2 = pkgs.callPackage ./pkgs/idris2 { };
   lean = pkgs.callPackage ./pkgs/lean { };
